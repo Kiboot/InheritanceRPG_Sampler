@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+
+    <TextView
+        android:id="@+id/txtP2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="P2 Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtP1Name" />
+
+    <TextView
+        android:id="@+id/txtP2mp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P2 Mana"
+        app:layout_constraintStart_toStartOf="@+id/txtP2hp"
+        app:layout_constraintTop_toTopOf="@+id/txtP1mp" />
+
+    <TextView
+        android:id="@+id/txtP2hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P2 Health"
+        app:layout_constraintStart_toStartOf="@+id/txtP2Damage"
+        app:layout_constraintTop_toTopOf="@+id/txtP1hp" />
+
+    <TextView
+        android:id="@+id/txtP2Damage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX ~ XX"
+        app:layout_constraintStart_toStartOf="@+id/txtP2Name"
+        app:layout_constraintTop_toTopOf="@+id/txtP1Damage" />
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/txtP1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:text="P1 Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLog" />
+
+    <TextView
+        android:id="@+id/txtP1Damage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="XX ~ XX"
+        app:layout_constraintStart_toStartOf="@+id/txtP1Name"
+        app:layout_constraintTop_toBottomOf="@+id/txtP1Name" />
+
+    <TextView
+        android:id="@+id/txtP1hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="P1 Health"
+        app:layout_constraintStart_toStartOf="@+id/txtP1Damage"
+        app:layout_constraintTop_toBottomOf="@+id/txtP1Damage" />
+
+    <TextView
+        android:id="@+id/txtP1mp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="P1 Mana"
+        app:layout_constraintStart_toStartOf="@+id/txtP1hp"
+        app:layout_constraintTop_toBottomOf="@+id/txtP1hp" />
+
+    <Button
+        android:id="@+id/btnNxtTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtLog"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtLog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
