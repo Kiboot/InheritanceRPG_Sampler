@@ -40,8 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtLog = findViewById(R.id.txtLog);
 
 
-
-
+        btnNextTurn.setOnClickListener(this);
 
 
 
