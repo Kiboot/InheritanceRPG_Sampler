@@ -81,10 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         enemy.setHealthPt(4000);
                         btnNextTurn.setText("Reset Game");
                     }
-
-
-
                 }
+
                 else if(gameCounter %2 !=1 ){
                     protag.setHealthPt(protag.getHealthPt() - monsatk);
                     txtLog.setText(enemy.getName() + " dealt "+heroatk+ " damage to the protag.");
