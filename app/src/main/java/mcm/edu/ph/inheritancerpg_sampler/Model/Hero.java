@@ -6,6 +6,7 @@ public class Hero extends GameUnit{
     int statAGI;
     int statINT;
     int statLUK;
+    int statCON;
     int goldValue;
 
     //borrowed variables
@@ -21,7 +22,7 @@ public class Hero extends GameUnit{
 
     public Hero(){} //default constructor
 
-    public Hero(String name,String title, double xpPt, int statSTR, int statAGI, int statINT, int statLUK, int atkMin, int atkMax, int healthPt, int manaPt, int lvl, double armor){
+    public Hero(String name,String title, double xpPt, int statSTR, int statAGI, int statINT, int statLUK, int statCON, int atkMin, int atkMax, int healthPt, int manaPt, int lvl, double armor){
 
         this.name = name;
         this.title = title;
@@ -63,6 +64,7 @@ public class Hero extends GameUnit{
         this.statAGI = statAGI;
         this.statINT = statINT;
         this.statLUK = statLUK;
+        this.statCON = statCON;
 
         super.setName(name);
         super.setTitle(title);
@@ -103,7 +105,7 @@ public class Hero extends GameUnit{
     @Override
     public int getHealthPt() {
         this.healthPt = super.getHealthPt();
-        this.healthPt += (statSTR * 20);
+        this.healthPt += (statCON * 20);
         return healthPt;
     }
 

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import mcm.edu.ph.inheritancerpg_sampler.Model.GameUnit;
+import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
 import mcm.edu.ph.inheritancerpg_sampler.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     GameUnit protag = new GameUnit("Protag","Friend", 20, 25, 2000, 500, 5, 5);
     GameUnit enemy = new GameUnit("Enemy", "Monster", 10, 15, 4000, 200, 3, 3);
+
+    Hero heroKnight = new Hero("Sebas","Knight", 0, 12, 6, 5, 3, 9, 20, 25, 1800, 500, 1, 4);
+
 
     int gameCounter = 1;
 
