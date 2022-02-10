@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     protag.setHealthPt(protag.getHealthPt() - monsatk);
                     txtLog.setText(enemy.getName() + " dealt "+heroatk+ " damage to the protag.");
                     p2health.setText(String.valueOf(protag.getHealthPt()));
-                    gameCounter++
+                    gameCounter++;
                 }
 
 
