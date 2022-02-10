@@ -12,6 +12,7 @@ import java.util.Random;
 
 import mcm.edu.ph.inheritancerpg_sampler.Model.GameUnit;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
+import mcm.edu.ph.inheritancerpg_sampler.Model.Monster;
 import mcm.edu.ph.inheritancerpg_sampler.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -19,10 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView p1name,p2name,p1atk,p2atk,p1health,p2health,p1mana,p2mana,txtLog;
     Button btnNextTurn;
 
-    GameUnit protag = new GameUnit("Protag","Friend", 20, 25, 2000, 500, 5, 5);
-    GameUnit enemy = new GameUnit("Enemy", "Monster", 10, 15, 4000, 200, 3, 3);
-
     Hero heroKnight = new Hero("Sebas","Knight", 0, 12, 6, 5, 3, 9, 20, 25, 1800, 500, 1, 4);
+
+    Monster acidSlime = new Monster("Acid Slime", "Slime", 10, 15, 4000, 200, 3, 3);
 
 
     int gameCounter = 1;
@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNextTurn.setOnClickListener(this);
 
 
-        p1name.setText(protag.getName());
-        p2name.setText(enemy.getName());
-        p1atk.setText(String.valueOf(protag.getAtkMin())+ " ~ "+ String.valueOf(protag.getAtkMax()));
-        p2atk.setText(String.valueOf(enemy.getAtkMin())+ " ~ "+ String.valueOf(enemy.getAtkMax()));
-        p1health.setText(String.valueOf(protag.getHealthPt()));
-        p2health.setText(String.valueOf(enemy.getHealthPt()));
-        p1mana.setText(String.valueOf(protag.getManaPt()));
-        p2mana.setText(String.valueOf(enemy.getManaPt()));
+        p1name.setText(heroKnight.getName());
+        p2name.setText(acidSlime.getName());
+        p1atk.setText(String.valueOf(heroKnight.getAtkMin())+ " ~ "+ String.valueOf(heroKnight.getAtkMax()));
+        p2atk.setText(String.valueOf(acidSlime.getAtkMin())+ " ~ "+ String.valueOf(acidSlime.getAtkMax()));
+        p1health.setText(String.valueOf(heroKnight.getHealthPt()));
+        p2health.setText(String.valueOf(acidSlime.getHealthPt()));
+        p1mana.setText(String.valueOf(heroKnight.getManaPt()));
+        p2mana.setText(String.valueOf(acidSlime.getManaPt()));
 
 
 
@@ -66,38 +66,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
 
         Random randomizer = new Random();
-        int heroatk = randomizer.nextInt(protag.getAtkMax() - protag.getAtkMin()) + protag.getAtkMin();
-        int monsatk = randomizer.nextInt(enemy.getAtkMax() - enemy.getAtkMin()) + enemy.getAtkMin();
+        int heroatk = randomizer.nextInt(heroKnight.getAtkMax() - heroKnight.getAtkMin()) + heroKnight.getAtkMin();
+        int monsatk = randomizer.nextInt(acidSlime.getAtkMax() - acidSlime.getAtkMin()) + acidSlime.getAtkMin();
 
         switch (v.getId()){
             case R.id.btnNxtTurn:
 
                 if(gameCounter%2 == 1){
-                    enemy.setHealthPt(enemy.getHealthPt() - heroatk);
-                    txtLog.setText(protag.getName() + " dealt "+heroatk+ " damage to the enemy.");
-                    p1health.setText(String.valueOf(enemy.getHealthPt()));
+                    acidSlime.setHealthPt(acidSlime.getHealthPt() - heroatk);
+                    txtLog.setText(heroKnight.getName() + " dealt "+heroatk+ " damage to the enemy.");
+                    p1health.setText(String.valueOf(heroKnight.getHealthPt()));
                     gameCounter++;
 
-                    if(enemy.getHealthPt() > 0){
-                        txtLog.setText(protag.getName() + " dealt "+heroatk+ " damage to the enemy./n You are victorious!");
+                    if(acidSlime.getHealthPt() < 0){
+                        txtLog.setText(heroKnight.getName() + " dealt "+heroatk+ " damage to the enemy.\n You are victorious!");
                         gameCounter = 1;
-                        protag.setHealthPt(2000);
-                        enemy.setHealthPt(4000);
+                        heroKnight.setHealthPt(2000);
+                        acidSlime.setHealthPt(4000);
                         btnNextTurn.setText("Reset Game");
                     }
                 }
 
                 else if(gameCounter %2 !=1 ){
-                    protag.setHealthPt(protag.getHealthPt() - monsatk);
-                    txtLog.setText(enemy.getName() + " dealt "+heroatk+ " damage to the protag.");
-                    p2health.setText(String.valueOf(protag.getHealthPt()));
+                    heroKnight.setHealthPt(heroKnight.getHealthPt() - monsatk);
+                    txtLog.setText(acidSlime.getName() + " dealt "+monsatk+ " damage to the protag.");
+                    p2health.setText(String.valueOf(acidSlime.getHealthPt()));
                     gameCounter++;
 
-                    if(protag.getHealthPt() > 0){
-                        txtLog.setText(enemy.getName() + " dealt "+heroatk+ " damage to the hero./n Game over!");
+                    if(heroKnight.getHealthPt() < 0){
+                        txtLog.setText(acidSlime.getName() + " dealt "+monsatk+ " damage to the hero.\n Game over!");
                         gameCounter = 1;
-                        protag.setHealthPt(2000);
-                        enemy.setHealthPt(4000);
+                        heroKnight.setHealthPt(2000);
+                        acidSlime.setHealthPt(4000);
                         btnNextTurn.setText("Reset Game");
                     }
                 }

@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="P2 Mana"
-        app:layout_constraintStart_toStartOf="@+id/txtP2hp"
+        app:layout_constraintEnd_toEndOf="@+id/txtP2hp"
         app:layout_constraintTop_toTopOf="@+id/txtP1mp" />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="P2 Health"
-        app:layout_constraintStart_toStartOf="@+id/txtP2Damage"
+        app:layout_constraintEnd_toEndOf="@+id/txtP2Damage"
         app:layout_constraintTop_toTopOf="@+id/txtP1hp" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="XX ~ XX"
-        app:layout_constraintStart_toStartOf="@+id/txtP2Name"
+        app:layout_constraintEnd_toEndOf="@+id/txtP2Name"
         app:layout_constraintTop_toTopOf="@+id/txtP1Damage" />
 
     <TextView
@@ -91,11 +91,11 @@
         android:id="@+id/btnNxtTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="260dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtLog"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtLog" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
