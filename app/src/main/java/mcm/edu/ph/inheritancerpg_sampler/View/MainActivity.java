@@ -2,6 +2,7 @@ package mcm.edu.ph.inheritancerpg_sampler.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int gameCounter = 1;
 
 
+    @SuppressLint("SetTextI18n") //Suppress warnings regarding strings
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    @SuppressLint("SetTextI18n")
     @Override
     public void onClick(View v){
 
@@ -71,6 +74,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     p1health.setText(String.valueOf(enemy.getHealthPt()));
                     gameCounter++;
 
+                    if(enemy.getHealthPt() > 0){
+                        txtLog.setText(protag.getName() + " dealt "+heroatk+ " damage to the enemy./n You are victorious!");
+                        gameCounter = 1;
+                        protag.setHealthPt(2000);
+                        enemy.setHealthPt(4000);
+                        btnNextTurn.setText("Reset Game");
+                    }
+
+
 
                 }
                 else if(gameCounter %2 !=1 ){
@@ -78,10 +90,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     txtLog.setText(enemy.getName() + " dealt "+heroatk+ " damage to the protag.");
                     p2health.setText(String.valueOf(protag.getHealthPt()));
                     gameCounter++;
+
+                    if(protag.getHealthPt() > 0){
+                        txtLog.setText(enemy.getName() + " dealt "+heroatk+ " damage to the hero./n Game over!");
+                        gameCounter = 1;
+                        protag.setHealthPt(2000);
+                        enemy.setHealthPt(4000);
+                        btnNextTurn.setText("Reset Game");
+                    }
                 }
-
-
-
 
                 break;
         }
