@@ -43,6 +43,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNextTurn.setOnClickListener(this);
 
 
+        p1name.setText(protag.getName());
+        p2name.setText(enemy.getName());
+        p1atk.setText(String.valueOf(protag.getAtkMin())+ " ~ "+ String.valueOf(protag.getAtkMax()));
+        p2atk.setText(String.valueOf(enemy.getAtkMin())+ " ~ "+ String.valueOf(enemy.getAtkMax()));
+        p1health.setText(String.valueOf(protag.getHealthPt()));
+        p2health.setText(String.valueOf(enemy.getHealthPt()));
+        p1mana.setText(String.valueOf(protag.getManaPt()));
+        p2mana.setText(String.valueOf(enemy.getManaPt()));
+
+
 
     }
     @Override
