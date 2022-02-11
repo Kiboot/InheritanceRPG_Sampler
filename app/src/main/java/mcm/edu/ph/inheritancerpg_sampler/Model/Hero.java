@@ -105,27 +105,27 @@ public class Hero extends GameUnit{
     @Override
     public int getHealthPt() {
         this.healthPt = super.getHealthPt();
-        this.healthPt += (statCON * 20);
+        this.healthPt += (statCON * 20); //20 points of health added per stat point of CON
         return healthPt;
     }
 
     @Override
     public int getManaPt() {
         this.manaPt = super.getManaPt();
-        this.manaPt += (statINT * 20);
+        this.manaPt += (statINT * 12); //12 points of mana added per stat point of INT
         return manaPt;
     }
     @Override
     public int getAtkMax() {
         this.atkMax = super.getAtkMax();
-        this.atkMax += (statSTR * 2);
+        this.atkMax += (statSTR * 2); //2 points of maximum damage added per stat point of STR
         return atkMax;
     }
 
     @Override
     public int getAtkMin() {
         this.atkMin = super.getAtkMin();
-        this.atkMin += (statSTR * 2);
+        this.atkMin += (statAGI * 2); //2 points of minimum damage added per stat point of AGI
         return atkMin;
     }
 
