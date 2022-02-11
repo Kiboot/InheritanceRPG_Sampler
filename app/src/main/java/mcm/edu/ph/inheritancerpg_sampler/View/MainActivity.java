@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import mcm.edu.ph.inheritancerpg_sampler.Controller.GameBehavior;
 import mcm.edu.ph.inheritancerpg_sampler.Model.GameUnit;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Monster;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Monster acidSlime = new Monster("Acid Slime", "Slime", 10, 15, 4000, 200, 3, 3);
 
+
+    GameBehavior g1 = new GameBehavior();
 
     int gameCounter = 1;
 
@@ -66,8 +69,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
 
         Random randomizer = new Random();
-        int heroatk = randomizer.nextInt(heroKnight.getAtkMax() - heroKnight.getAtkMin()) + heroKnight.getAtkMin();
+        int heroatk = g1.attack(heroKnight.getAtkMin(),heroKnight.getAtkMax()); //alternate randomizer code
         int monsatk = randomizer.nextInt(acidSlime.getAtkMax() - acidSlime.getAtkMin()) + acidSlime.getAtkMin();
+
+
+
 
         switch (v.getId()){
             case R.id.btnNxtTurn:
