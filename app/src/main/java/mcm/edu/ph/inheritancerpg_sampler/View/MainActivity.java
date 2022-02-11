@@ -21,7 +21,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView p1name,p2name,p1atk,p2atk,p1health,p2health,p1mana,p2mana,txtLog;
     Button btnNextTurn;
 
-    Hero heroKnight = new Hero("Sebas","Knight", 0, 12, 6, 5, 3, 9, 20, 25, 1800, 500, 1, 4);
+    Hero heroKnight = new Hero(
+            "Sebas",
+            "Knight",
+            0,
+            12,
+            6,
+            5,
+            3,
+            9,
+            20,
+            25,
+            1800,
+            500,
+            1,
+            4);
+
+    Hero superNathan = new Hero();
+
 
     Monster acidSlime = new Monster("Acid Slime", "Slime", 10, 15, 4000, 200, 3, 3);
 
@@ -36,6 +53,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        superNathan.setName("Nathan");
+        superNathan.setTitle("Loverboy");
+        superNathan.setStatSTR(5);
+        superNathan.setStatAGI(5);
+        superNathan.setStatLUK(5);
+        superNathan.setStatINT(5);
+        superNathan.setStatCON(5);
+
+
 
         p1name = findViewById(R.id.txtP1Name);
         p2name = findViewById(R.id.txtP2Name);
@@ -70,13 +97,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Random randomizer = new Random();
         int heroatk = g1.attack(heroKnight.getAtkMin(),heroKnight.getAtkMax()); //alternate randomizer code
-        int monsatk = randomizer.nextInt(acidSlime.getAtkMax() - acidSlime.getAtkMin()) + acidSlime.getAtkMin();
+        //int monsatk = randomizer.nextInt(acidSlime.getAtkMax() - acidSlime.getAtkMin()) + acidSlime.getAtkMin();
+        int monsatk = g1.attack(acidSlime.getAtkMin(),acidSlime.getAtkMax());
 
 
 
 
         switch (v.getId()){
             case R.id.btnNxtTurn:
+
 
                 if(gameCounter%2 == 1){
                     acidSlime.setHealthPt(acidSlime.getHealthPt() - heroatk);

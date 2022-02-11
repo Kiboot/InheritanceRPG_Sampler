@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InheritanceRPG_Sampler">
         <activity
+            android:name=".View.TaskBoard"
+            android:exported="false" />
+        <activity
+            android:name=".View.ItemMarket"
+            android:exported="false" />
+        <activity
+            android:name=".View.HeroClassPicker"
+            android:exported="false" />
+        <activity
             android:name=".View.TownHall"
             android:exported="false" />
         <activity

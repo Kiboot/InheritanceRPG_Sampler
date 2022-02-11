@@ -102,6 +102,32 @@ public class Hero extends GameUnit{
         super.setArmor(armor);
     }
 
+    public int getStatSTR() { return statSTR; }
+    public int getStatAGI() { return statAGI; }
+    public int getStatCON() { return statCON; }
+    public int getStatINT() { return statINT; }
+    public int getStatLUK() { return statLUK; }
+
+    public void setStatSTR(int statSTR) {
+        this.statSTR = statSTR;
+    }
+
+    public void setStatAGI(int statAGI) {
+        this.statAGI = statAGI;
+    }
+
+    public void setStatCON(int statCON) {
+        this.statCON = statCON;
+    }
+
+    public void setStatINT(int statINT) {
+        this.statINT = statINT;
+    }
+
+    public void setStatLUK(int statLUK) {
+        this.statLUK = statLUK;
+    }
+
     @Override
     public int getHealthPt() {
         this.healthPt = super.getHealthPt();
