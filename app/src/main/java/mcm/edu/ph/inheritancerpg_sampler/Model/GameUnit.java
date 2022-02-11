@@ -1,8 +1,6 @@
 package mcm.edu.ph.inheritancerpg_sampler.Model;
 
 
-import mcm.edu.ph.inheritancerpg_sampler.Controller.Unit;
-
 public class GameUnit {
     String name;
     String title;
