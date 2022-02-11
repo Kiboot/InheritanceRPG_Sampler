@@ -111,19 +111,15 @@ public class Hero extends GameUnit{
     public void setStatSTR(int statSTR) {
         this.statSTR = statSTR;
     }
-
     public void setStatAGI(int statAGI) {
         this.statAGI = statAGI;
     }
-
     public void setStatCON(int statCON) {
         this.statCON = statCON;
     }
-
     public void setStatINT(int statINT) {
         this.statINT = statINT;
     }
-
     public void setStatLUK(int statLUK) {
         this.statLUK = statLUK;
     }
@@ -134,7 +130,6 @@ public class Hero extends GameUnit{
         this.healthPt += (statCON * 20); //20 points of health added per stat point of CON
         return healthPt;
     }
-
     @Override
     public int getManaPt() {
         this.manaPt = super.getManaPt();
@@ -147,12 +142,28 @@ public class Hero extends GameUnit{
         this.atkMax += (statSTR * 2); //2 points of maximum damage added per stat point of STR
         return atkMax;
     }
-
     @Override
     public int getAtkMin() {
         this.atkMin = super.getAtkMin();
         this.atkMin += (statAGI * 2); //2 points of minimum damage added per stat point of AGI
         return atkMin;
+    }
+
+    //passive level up stat growth
+    public void levelUpGrowth(int statSTR, int statAGI, int statCON, int statLUK, int statINT){
+        this.statSTR += statSTR;
+        this.statAGI += statAGI;
+        this.statINT += statINT;
+        this.statCON += statCON;
+        this.statLUK += statLUK;
+    }
+    //point allocation stat growth
+    public void statAllocGrowth(int statSTR, int statAGI, int statCON, int statLUK, int statINT){
+        this.statSTR += statSTR;
+        this.statAGI += statAGI;
+        this.statINT += statINT;
+        this.statCON += statCON;
+        this.statLUK += statLUK;
     }
 
 }
