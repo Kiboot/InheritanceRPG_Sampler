@@ -9,6 +9,8 @@ public class Hero extends GameUnit{
     int statCON;
     int goldValue;
 
+
+
     //borrowed variables
     String name;
     String title;
@@ -16,8 +18,12 @@ public class Hero extends GameUnit{
     int atkMax;
     int healthPt;
     int manaPt;
-    int lvl;
-    double armor;
+    int lvl = 1;
+    double armor = 0;
+    // miscellaneous variables
+    double xpToLvlUp = lvl * 200;
+
+
 
 
     public Hero(){} //default constructor
@@ -149,6 +155,7 @@ public class Hero extends GameUnit{
         return atkMin;
     }
 
+
     //passive level up stat growth
     public void levelUpGrowth(int statSTR, int statAGI, int statCON, int statLUK, int statINT){
         this.statSTR += statSTR;
@@ -156,6 +163,13 @@ public class Hero extends GameUnit{
         this.statINT += statINT;
         this.statCON += statCON;
         this.statLUK += statLUK;
+
+        getHealthPt();
+        getManaPt();
+        getAtkMax();
+        getAtkMin();
+
+
     }
     //point allocation stat growth
     public void statAllocGrowth(int statSTR, int statAGI, int statCON, int statLUK, int statINT){
@@ -164,6 +178,22 @@ public class Hero extends GameUnit{
         this.statINT += statINT;
         this.statCON += statCON;
         this.statLUK += statLUK;
+
+        getHealthPt();
+        getManaPt();
+        getAtkMax();
+        getAtkMin();
+
+    }
+    public void lvlUp(){
+        if(xpPt > xpToLvlUp){
+            xpPt = 0;
+            lvl += 1;
+            xpToLvlUp = lvl * 200;
+            levelUpGrowth(statSTR,statAGI,statCON,statLUK,statINT);
+
+        }
+
     }
 
 }
