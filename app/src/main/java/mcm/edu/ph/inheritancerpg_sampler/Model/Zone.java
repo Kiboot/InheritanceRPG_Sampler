@@ -1,4 +1,4 @@
-package mcm.edu.ph.inheritancerpg_sampler.View;
+package mcm.edu.ph.inheritancerpg_sampler.Model;
 
 
 

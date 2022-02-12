@@ -4,7 +4,7 @@ import android.widget.TextView;
 import java.util.Random;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Monster;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Weapon;
-import mcm.edu.ph.inheritancerpg_sampler.View.Zone;
+import mcm.edu.ph.inheritancerpg_sampler.Model.Zone;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
 
 

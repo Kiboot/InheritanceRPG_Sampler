@@ -12,6 +12,7 @@ public class Weapon extends GameItem{
     public Weapon(String name,int atkMin, int atkMax, double goldValue){
         setName(name);
         setDesc("");
+        setWeaponType("");
         setGoldValue(goldValue);
         setArmor(0);
         this.atkMin = atkMin;
@@ -26,6 +27,7 @@ public class Weapon extends GameItem{
     }
     public Weapon(String name, String weaponType, int atkMin, int atkMax, double goldValue){
         setName(name);
+        setWeaponType(weaponType);
         setDesc("");
         setGoldValue(goldValue);
         setArmor(0);
@@ -47,9 +49,10 @@ public class Weapon extends GameItem{
     public int getAtkMax() { return atkMax; }
     public String getWeaponType() { return weaponType; }
 
-
     //setters
     public void setAtkMin(int atkMin) { this.atkMin = atkMin; }
     public void setAtkMax(int atkMax){ this.atkMax = atkMax; }
     public void setWeaponType(String weaponType){ this.weaponType = weaponType;}
+
+    ;
 }
