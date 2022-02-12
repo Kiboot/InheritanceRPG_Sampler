@@ -9,8 +9,6 @@ public class Hero extends GameUnit{
     int statCON;
     int goldValue;
 
-
-
     //borrowed variables
     String name;
     String title;
@@ -22,8 +20,6 @@ public class Hero extends GameUnit{
     double armor = 0;
     // miscellaneous variables
     double xpToLvlUp = lvl * 200;
-
-
 
 
     public Hero(){} //default constructor

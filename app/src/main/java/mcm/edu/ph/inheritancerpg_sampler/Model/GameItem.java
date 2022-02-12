@@ -1,14 +1,46 @@
 package mcm.edu.ph.inheritancerpg_sampler.Model;
 
 public class GameItem {
-    String name;
-    String desc;
-    double goldValue;
-    double armor;
+    private String name;
+    private String desc;
+    private double goldValue;
+    private double armor;
 
-    int statSTR;
-    int statAGI;
-    int statINT;
-    int statLUK;
-    int statCON;
+    private int statSTR;
+    private int statAGI;
+    private int statINT;
+    private int statLUK;
+    private int statCON;
+
+    private int healthPt;
+    private int manaPt;
+
+    public GameItem(){}
+
+    //getters
+    public String getName() { return name; }
+    public String getDesc() { return desc; }
+    public double getGoldValue() { return goldValue; }
+    public double getArmor() { return armor; }
+    public int getStatSTR() { return statSTR; }
+    public int getStatAGI() { return statAGI; }
+    public int getStatINT() { return statINT; }
+    public int getStatLUK() { return statLUK; }
+    public int getStatCON() { return statCON; }
+    public int getHealthPt() { return healthPt; }
+    public int getManaPt() { return manaPt; }
+
+    //setters
+    public void setName(String name) { this.name = name; }
+    public void setDesc(String desc) { this.desc = desc; }
+    public void setGoldValue(double goldValue) { this.goldValue = goldValue; }
+    public void setArmor(double armor) { this.armor = armor; }
+    public void setStatSTR(int statSTR) { this.statSTR = statSTR; }
+    public void setStatAGI(int statAGI) { this.statAGI = statAGI; }
+    public void setStatINT(int statINT) { this.statINT = statINT; }
+    public void setStatLUK(int statLUK) { this.statLUK = statLUK; }
+    public void setStatCON(int statCON) { this.statCON = statCON; }
+    public void setHealthPt(int healthPt) { this.healthPt = healthPt; }
+    public void setManaPt(int manaPt) { this.manaPt = manaPt; }
+
 }
