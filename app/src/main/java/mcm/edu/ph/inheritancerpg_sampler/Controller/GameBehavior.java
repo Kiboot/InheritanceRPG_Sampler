@@ -78,24 +78,22 @@ public class GameBehavior {
 
         if(gameCounter%2 == 1){
             monster.setHealthPt(monster.getHealthPt() - heroatk);
-            txtLog.setText(hero.getName() + " dealt "+heroatk+ " damage to the enemy.");
+            txtLog.setText(hero.getName() + " dealt "+heroatk+ " damage to the "+monster.getName()+".");
             p1health.setText(String.valueOf(hero.getHealthPt()));
             gameCounter++;
-
             if(monster.getHealthPt() < 0){
-                txtLog.setText(hero.getName() + " dealt "+heroatk+ " damage to the enemy.\n You are victorious!");
+                txtLog.setText(hero.getName() + " dealt "+heroatk+ " damage to the "+monster.getName()+".\n You are victorious!");
                 gameCounter = 1;
             }
         }
-
         else if(gameCounter %2 !=1 ){
             hero.setHealthPt(hero.getHealthPt() - monsatk);
-            txtLog.setText(monster.getName() + " dealt "+monsatk+ " damage to the protag.");
+            txtLog.setText(monster.getName() + " dealt "+monsatk+ " damage to the "+hero.getName()+".");
             p2health.setText(String.valueOf(monster.getHealthPt()));
             gameCounter++;
 
             if(hero.getHealthPt() < 0){
-                txtLog.setText(monster.getName() + " dealt "+monsatk+ " damage to the hero.\n Game over!");
+                txtLog.setText(monster.getName() + " dealt "+monsatk+ " damage to the "+hero.getName()+".\n Game Over!");
                 gameCounter = 1;
             }
         }
