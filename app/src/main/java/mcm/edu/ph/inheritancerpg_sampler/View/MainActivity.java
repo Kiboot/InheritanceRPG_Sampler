@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
 
         Random randomizer = new Random();
-        int heroatk = g1.attack(heroKnight.getAtkMin(),heroKnight.getAtkMax()); //alternate randomizer code
+        int heroatk = g1.attack(heroKnight.getAtkMin(),heroKnight.getAtkMax(),0); //alternate randomizer code
         //int monsatk = randomizer.nextInt(acidSlime.getAtkMax() - acidSlime.getAtkMin()) + acidSlime.getAtkMin();
-        int monsatk = g1.attack(acidSlime.getAtkMin(),acidSlime.getAtkMax());
+        int monsatk = g1.attack(acidSlime.getAtkMin(),acidSlime.getAtkMax(),0);
 
 
 
