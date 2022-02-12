@@ -6,22 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".View.CharacterSelection">
 
+    <ImageButton
+        android:id="@+id/btnHeroIcon1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:background="#0000"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/btnHeroIcon2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/flag_02_blue02"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnHeroIcon2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#0000"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/btnHeroIcon3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHeroIcon1"
+        app:layout_constraintTop_toTopOf="@+id/btnHeroIcon1"
+        app:srcCompat="@drawable/flag_02_green"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnHeroIcon3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#0000"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/btnHeroIcon4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHeroIcon2"
+        app:layout_constraintTop_toTopOf="@+id/btnHeroIcon2"
+        app:srcCompat="@drawable/flag_02_red"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnHeroIcon4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#0000"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHeroIcon3"
+        app:layout_constraintTop_toTopOf="@+id/btnHeroIcon2"
+        app:srcCompat="@drawable/flag_02_yellow"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="16dp"
         android:text="Select Hero Class"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnProceed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="16dp"
         android:text="Select Class"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,13 +81,35 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtHeroDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginTop="32dp"
         android:text="Class Description appears here..."
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/txtHeroClass"
+        app:layout_constraintStart_toStartOf="@+id/txtHeroClass"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeroClass" />
+
+    <ImageView
+        android:id="@+id/imgHeroPortrait"
+        android:layout_width="390dp"
+        android:layout_height="265dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHeroIcon1"
+        app:srcCompat="@drawable/hero2" />
+
+    <TextView
+        android:id="@+id/txtHeroClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnProceed"
+        app:layout_constraintStart_toStartOf="@+id/btnProceed"
+        app:layout_constraintTop_toBottomOf="@+id/imgHeroPortrait" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
