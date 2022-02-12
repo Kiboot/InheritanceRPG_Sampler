@@ -40,6 +40,7 @@ public class Hero extends GameUnit{
         this.statAGI = statAGI;
         this.statINT = statINT;
         this.statLUK = statLUK;
+        this.statCON = statCON;
 
         super.setName(name);
         super.setTitle(title);
@@ -50,7 +51,7 @@ public class Hero extends GameUnit{
         super.setLvl(lvl);
         super.setArmor(armor);
     }
-    public Hero(String name, double xpPt, int statSTR, int statAGI, int statINT, int statLUK, int atkMin, int atkMax, int healthPt, int manaPt, int lvl, double armor){
+    public Hero(String name, int statSTR, int statAGI, int statINT, int statLUK, int statCON, int atkMin, int atkMax, int healthPt, int manaPt, int lvl, double armor){
 
         this.name = name;
         this.title = "";
@@ -61,7 +62,7 @@ public class Hero extends GameUnit{
         this.lvl = lvl;
         this.armor = armor;
 
-        this.xpPt = xpPt;
+        this.xpPt = 0;
         this.statSTR = statSTR;
         this.statAGI = statAGI;
         this.statINT = statINT;
@@ -77,22 +78,34 @@ public class Hero extends GameUnit{
         super.setLvl(lvl);
         super.setArmor(armor);
     }
-    public Hero(String name, double xpPt, int statSTR, int statAGI, int statINT, int statLUK, int atkMin, int atkMax, int healthPt, int manaPt, double armor){
+
+    public Hero(String name,
+                String title,
+                int statSTR,
+                int statAGI,
+                int statINT,
+                int statLUK,
+                int statCON,
+                int atkMin,
+                int atkMax,
+                int healthPt,
+                int manaPt){
 
         this.name = name;
-        this.title = "";
+        this.title = title;
         this.atkMin = atkMin;
         this.atkMax = atkMax;
         this.healthPt = healthPt;
         this.manaPt = manaPt;
         this.lvl = 1;
-        this.armor = armor;
+        this.armor = 0;
 
-        this.xpPt = xpPt;
+        this.xpPt = 0;
         this.statSTR = statSTR;
         this.statAGI = statAGI;
         this.statINT = statINT;
         this.statLUK = statLUK;
+        this.statCON = statCON;
 
         super.setName(name);
         super.setTitle(title);

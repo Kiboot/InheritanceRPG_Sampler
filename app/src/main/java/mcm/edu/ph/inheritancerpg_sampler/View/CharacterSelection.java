@@ -66,6 +66,7 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
                 heroPortrait.setImageResource(R.drawable.hero2);
                 txtHeroClass.setText("Mage");
                 heroDesc.setText("A class with high intelligence growth, they specialize in devastating spells.");
+                selection = 1;
                 break;
 
             case R.id.btnHeroIcon2:
@@ -78,6 +79,7 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
                 heroPortrait.setImageResource(R.drawable.hero4);
                 txtHeroClass.setText("Ranger");
                 heroDesc.setText("A class that makes use of ranged physical attacks");
+                selection = 2;
                 break;
             case R.id.btnHeroIcon3:
                 hero1.setEnabled(true);
@@ -88,8 +90,9 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
                 heroPortrait.setImageResource(R.drawable.hero1);
                 txtHeroClass.setText("Warrior");
                 heroDesc.setText("A hero class that deals great amounts of physical damage");
+                selection = 3;
 
-                intent.putExtra("heroClass","warrior");
+
 
                 break;
             case R.id.btnHeroIcon4:
@@ -103,23 +106,12 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
                 heroDesc.setText("A class of hero that is inherently tough with its high constitution base");
 
                 intent.putExtra("heroClass","paladin");
+                selection = 4;
 
 
                 break;
             case R.id.btnProceed:
-
-                if(selection == 1){
-                    intent.putExtra("heroClass","mage");
-                }
-                else if(selection == 2){
-                    intent.putExtra("heroClass","mage");
-                }
-                else if(selection == 3){
-                    intent.putExtra("heroClass","warrior");
-                }
-                else if(selection == 4){
-                    intent.putExtra("heroClass","paladin");
-                }
+                intent.putExtra("heroClass",selection);
                 startActivity(intent);
                 break;
         }
