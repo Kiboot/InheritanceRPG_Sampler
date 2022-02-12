@@ -12,22 +12,26 @@ public class Zone {
     private double enemyEncounterRate = 1;
     private double chestEncounterRate = 1;
     private int instanceCount = 10;
+    private int difficultyLevel = 1;
     private boolean bossEncounter = false;
+
     //double enemyEncounterFactor = 0.80;
     //private static double chestEncounterFactor = 0.20;
 
 
 
     public Zone(){}
-    public Zone(String zoneName, boolean bossEncounter, int instanceCount){
+    public Zone(String zoneName, boolean bossEncounter, int instanceCount, int difficultyLevel){
         this.zoneName = zoneName;
         this.bossEncounter = bossEncounter;
         this.instanceCount = instanceCount;
+        this.difficultyLevel = difficultyLevel;
     }
-    public Zone(String zoneName, String zoneDesc, boolean bossEncounter, int instanceCount, double expRate, double lootRate, double chestEncounterRate, double enemyEncounterRate){
+    public Zone(String zoneName, String zoneDesc, boolean bossEncounter, int instanceCount, int difficultyLevel, double expRate, double lootRate, double chestEncounterRate, double enemyEncounterRate){
         this.zoneName = zoneName;
         this.bossEncounter = bossEncounter;
         this.instanceCount = instanceCount;
+        this.difficultyLevel = difficultyLevel;
         this.zoneDesc = zoneDesc;
         this.expRate = expRate;
         this.lootRate = lootRate;
@@ -39,6 +43,7 @@ public class Zone {
     public String getZoneDesc() { return zoneDesc; }
     public boolean isBossEncounter() { return bossEncounter; }
     public int getInstanceCount() { return instanceCount; }
+    public int getDifficultyLevel() { return difficultyLevel; }
     public double getExpRate() { return expRate; }
     public double getLootRate() { return lootRate; }
     public double getChestEncounterRate() { return chestEncounterRate; }
@@ -51,6 +56,7 @@ public class Zone {
     public void setZoneDesc(String zoneDesc) { this.zoneDesc = zoneDesc; }
     public void setBossEncounter(boolean bossEncounter) { this.bossEncounter = bossEncounter; }
     public void setInstanceCount(int instanceCount) { this.instanceCount = instanceCount; }
+    public void setDifficultyLevel(int difficultyLevel) { this.difficultyLevel = difficultyLevel; }
     public void setExpRate(double expRate) { this.expRate = expRate; }
     public void setLootRate(double lootRate) { this.lootRate = lootRate; }
     public void setChestEncounterRate(double chestEncounterRate) { this.chestEncounterRate = chestEncounterRate; }

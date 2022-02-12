@@ -122,6 +122,9 @@ public class Hero extends GameUnit{
     public int getStatCON() { return statCON; }
     public int getStatINT() { return statINT; }
     public int getStatLUK() { return statLUK; }
+    public int getGoldValue() { return goldValue; }
+
+
 
     public void setStatSTR(int statSTR) {
         this.statSTR = statSTR;
@@ -138,6 +141,7 @@ public class Hero extends GameUnit{
     public void setStatLUK(int statLUK) {
         this.statLUK = statLUK;
     }
+    public void setGoldValue(int goldValue) { this.goldValue = goldValue; }
 
     @Override
     public int getHealthPt() {
