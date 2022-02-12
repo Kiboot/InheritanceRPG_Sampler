@@ -52,7 +52,7 @@ public class GameBehavior {
             if(bossEncounter == false){ //typical field/dungeon with no bosses
 
                 if( chestRoll <= 20) { //if the dice rolls 1 to 20, then open a chest
-                    //TODO: put thecode for chest encounter here
+                    //TODO: put the code for chest encounter here
                     dungeonChest(difficultyLevel,hero); //code for chest loot randomizer
                 }
                 else if(enemyRoll <= 21 && enemyRoll >= 90){ //if the dice rolls 21 to 90, you encounter an enemy
@@ -60,6 +60,7 @@ public class GameBehavior {
                     combat(monster, hero, txtLog, p1health, p2health); // the code for turn based combat
                 }else{
                     //else, nothing happens
+                    txtLog.setText("Nothing Happens...");
                 }
                 instanceCount--;
             }

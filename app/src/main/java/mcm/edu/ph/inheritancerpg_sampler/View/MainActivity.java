@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.btnNxtTurn:
 
+                //g1.delve(1,Zone zone,txtLog,p1health,p2health);
 
                 if(gameCounter%2 == 1){
                     acidSlime.setHealthPt(acidSlime.getHealthPt() - heroatk);

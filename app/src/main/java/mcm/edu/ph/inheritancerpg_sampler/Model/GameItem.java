@@ -14,6 +14,8 @@ public class GameItem {
 
     private int healthPt;
     private int manaPt;
+    private int itemRarity;
+    private String itemType;
 
     public GameItem(){}
 
@@ -29,6 +31,8 @@ public class GameItem {
     public int getStatCON() { return statCON; }
     public int getHealthPt() { return healthPt; }
     public int getManaPt() { return manaPt; }
+    public int getItemRarity() { return itemRarity; }
+    public String getItemType() { return itemType; }
 
     //setters
     public void setName(String name) { this.name = name; }
@@ -42,5 +46,6 @@ public class GameItem {
     public void setStatCON(int statCON) { this.statCON = statCON; }
     public void setHealthPt(int healthPt) { this.healthPt = healthPt; }
     public void setManaPt(int manaPt) { this.manaPt = manaPt; }
-
+    public void setItemRarity(int itemRarity) { this.itemRarity = itemRarity; }
+    public void setItemType(String itemType) { this.itemType = itemType; }
 }
