@@ -14,6 +14,7 @@ import mcm.edu.ph.inheritancerpg_sampler.Controller.GameBehavior;
 import mcm.edu.ph.inheritancerpg_sampler.Model.GameUnit;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Monster;
+import mcm.edu.ph.inheritancerpg_sampler.Model.Weapon;
 import mcm.edu.ph.inheritancerpg_sampler.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,9 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             1,
             4);
 
-    Hero superNathan = new Hero();
-
-
+    Weapon katana = new Weapon("Katana",15,25,60);
     Monster acidSlime = new Monster("Acid Slime", "Slime", 10, 15, 4000, 200, 3, 3);
 
 
@@ -54,13 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        superNathan.setName("Nathan");
-        superNathan.setTitle("Loverboy");
-        superNathan.setStatSTR(5);
-        superNathan.setStatAGI(5);
-        superNathan.setStatLUK(5);
-        superNathan.setStatINT(5);
-        superNathan.setStatCON(5);
+
 
 
 

@@ -1,11 +1,12 @@
 package mcm.edu.ph.inheritancerpg_sampler.Model;
 
 public class Weapon extends GameItem{
-    int atkMin;
-    int atkMax;
+    private int atkMin;
+    private int atkMax;
 
-    public Weapon(){}
+    public Weapon(){} //default constructor
 
+    //basic weapon constructor
     public Weapon(String name,int atkMin, int atkMax, double goldValue){
         setName(name);
         setDesc("");
@@ -22,5 +23,12 @@ public class Weapon extends GameItem{
         setManaPt(0);
     }
 
+    //getters
 
+    public void setAtkMin(int atkMin) { this.atkMin = atkMin; }
+    public void setAtkMax(int atkMax){ this.atkMax = atkMax; }
+
+    //setters
+    public int getAtkMin() { return atkMin; }
+    public int getAtkMax() { return atkMax; }
 }
