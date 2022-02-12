@@ -1,8 +1,13 @@
 package mcm.edu.ph.inheritancerpg_sampler.Controller;
 
+import android.widget.TextView;
+
 import java.util.Random;
 
+import mcm.edu.ph.inheritancerpg_sampler.Model.Monster;
 import mcm.edu.ph.inheritancerpg_sampler.View.Zone;
+import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
+import mcm.edu.ph.inheritancerpg_sampler.R;
 
 
 public class GameBehavior {
@@ -57,24 +62,44 @@ public class GameBehavior {
                 instanceCount--;
 
             }
-
-
-
-
-
-
-
-
-
         }
+
+
+
 
     }
 
+    public void combat(Monster monster, Hero hero, TextView txtLog, TextView p1health, TextView p2health){
 
+        int gameCounter = 1;
 
+        int heroatk = attack(hero.getAtkMin(),hero.getAtkMax(),0);
+        int monsatk = attack(monster.getAtkMin(),monster.getAtkMax(),0);
 
+        if(gameCounter%2 == 1){
+            monster.setHealthPt(monster.getHealthPt() - heroatk);
+            txtLog.setText(hero.getName() + " dealt "+heroatk+ " damage to the enemy.");
+            p1health.setText(String.valueOf(hero.getHealthPt()));
+            gameCounter++;
 
+            if(monster.getHealthPt() < 0){
+                txtLog.setText(hero.getName() + " dealt "+heroatk+ " damage to the enemy.\n You are victorious!");
+                gameCounter = 1;
+            }
+        }
 
+        else if(gameCounter %2 !=1 ){
+            hero.setHealthPt(hero.getHealthPt() - monsatk);
+            txtLog.setText(monster.getName() + " dealt "+monsatk+ " damage to the protag.");
+            p2health.setText(String.valueOf(monster.getHealthPt()));
+            gameCounter++;
+
+            if(hero.getHealthPt() < 0){
+                txtLog.setText(monster.getName() + " dealt "+monsatk+ " damage to the hero.\n Game over!");
+                gameCounter = 1;
+            }
+        }
+    }
 
 
 }
