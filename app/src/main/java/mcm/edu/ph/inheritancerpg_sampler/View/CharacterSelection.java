@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import mcm.edu.ph.inheritancerpg_sampler.R;
 
+
 public class CharacterSelection extends AppCompatActivity implements View.OnClickListener{
 
 

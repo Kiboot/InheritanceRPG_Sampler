@@ -1,13 +1,12 @@
 package mcm.edu.ph.inheritancerpg_sampler.Controller;
 
 import android.widget.TextView;
-
 import java.util.Random;
-
 import mcm.edu.ph.inheritancerpg_sampler.Model.Monster;
 import mcm.edu.ph.inheritancerpg_sampler.View.Zone;
 import mcm.edu.ph.inheritancerpg_sampler.Model.Hero;
 import mcm.edu.ph.inheritancerpg_sampler.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class GameBehavior {
@@ -22,11 +21,12 @@ public class GameBehavior {
         return (int) result;
     }
 
-    public void delve(int provisions, Zone zone){
+    public void delve(int provisions, Zone zone, TextView txtLog, TextView p1health, TextView p2health){
+
         String zoneName;
         String zoneDesc;
-
-
+        Monster monster = new Monster();
+        Hero hero = new Hero();
 
         double expRate = 1;
         double lootRate = 1;
@@ -56,11 +56,11 @@ public class GameBehavior {
                 }
                 else if(enemyRoll <= 21 && enemyRoll >= 90){ //if the dice rolls 21 to 90, you encounter an enemy
                     //code for enemy encounter
+                    combat(monster, hero, txtLog, p1health, p2health);
                 }else{
                     //else, nothing happens
                 }
                 instanceCount--;
-
             }
         }
 
