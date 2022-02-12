@@ -54,9 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-
-
-
         p1name = findViewById(R.id.txtP1Name);
         p2name = findViewById(R.id.txtP2Name);
         p1atk = findViewById(R.id.txtP1Damage);

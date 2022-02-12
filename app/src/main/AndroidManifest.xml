@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InheritanceRPG_Sampler">
         <activity
+            android:name=".View.StartingPointAllocation"
+            android:exported="false" />
+        <activity
+            android:name=".View.CharacterSelection"
+            android:exported="false" />
+        <activity
             android:name=".View.TaskBoard"
             android:exported="false" />
         <activity

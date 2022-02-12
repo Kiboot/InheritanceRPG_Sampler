@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.StartingPointAllocation">
+
+    <EditText
+        android:id="@+id/txtNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Hans"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <Button
+        android:id="@+id/btnAddSTR"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/btnSubSTR"
+        app:layout_constraintTop_toTopOf="@+id/btnSubSTR"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/btnSubSTR"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/txtSTR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddSTR"
+        app:layout_constraintStart_toEndOf="@+id/btnAddSTR"
+        app:layout_constraintTop_toTopOf="@+id/btnAddSTR"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/btnSubAGI"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/btnSubSTR"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubSTR" />
+
+    <Button
+        android:id="@+id/btnAddAGI"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="@+id/btnAddSTR"
+        app:layout_constraintTop_toTopOf="@+id/btnSubAGI" />
+
+    <TextView
+        android:id="@+id/txtAGI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddAGI"
+        app:layout_constraintStart_toStartOf="@+id/txtSTR"
+        app:layout_constraintTop_toTopOf="@+id/btnAddAGI" />
+
+    <Button
+        android:id="@+id/btnSubINT"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/btnSubAGI"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubAGI" />
+
+    <Button
+        android:id="@+id/btnAddINT"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="@+id/btnAddAGI"
+        app:layout_constraintTop_toTopOf="@+id/btnSubINT" />
+
+    <TextView
+        android:id="@+id/txtINT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddINT"
+        app:layout_constraintStart_toStartOf="@+id/txtAGI"
+        app:layout_constraintTop_toTopOf="@+id/btnAddINT" />
+
+    <Button
+        android:id="@+id/btnSubLUK"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/btnSubINT"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubINT" />
+
+    <Button
+        android:id="@+id/btnAddLUK"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddINT"
+        app:layout_constraintStart_toStartOf="@+id/btnAddINT"
+        app:layout_constraintTop_toTopOf="@+id/btnSubLUK" />
+
+    <TextView
+        android:id="@+id/txtLUK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddLUK"
+        app:layout_constraintStart_toStartOf="@+id/txtINT"
+        app:layout_constraintTop_toTopOf="@+id/btnAddLUK" />
+
+    <Button
+        android:id="@+id/btnSubCON"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/btnSubLUK"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubLUK" />
+
+    <Button
+        android:id="@+id/btnAddCON"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="@+id/btnAddLUK"
+        app:layout_constraintTop_toTopOf="@+id/btnSubCON" />
+
+    <TextView
+        android:id="@+id/txtCON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddCON"
+        app:layout_constraintStart_toStartOf="@+id/txtLUK"
+        app:layout_constraintTop_toTopOf="@+id/btnAddCON" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Name: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Allocate your initial stat points"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameInput" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Strength"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSTR"
+        app:layout_constraintStart_toEndOf="@+id/txtSTR"
+        app:layout_constraintTop_toTopOf="@+id/txtSTR" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agility"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAGI"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/txtAGI" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intelligence"
+        app:layout_constraintBottom_toBottomOf="@+id/txtINT"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/txtINT" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luck"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLUK"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/txtLUK" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constitution"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCON"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/txtCON" />
+
+    <Button
+        android:id="@+id/btnGameStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Start Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPoints" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textSize="15sp"
+        android:text="Remaining  Points:"
+        app:layout_constraintStart_toStartOf="@+id/btnSubCON"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubCON" />
+
+    <TextView
+        android:id="@+id/txtPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/txtCON"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
