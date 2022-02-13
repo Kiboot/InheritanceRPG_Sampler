@@ -62,4 +62,12 @@ public class Zone {
     public void setChestEncounterRate(double chestEncounterRate) { this.chestEncounterRate = chestEncounterRate; }
     public void setEnemyEncounterRate(double enemyEncounterRate) { this.enemyEncounterRate = enemyEncounterRate; }
 
+
+
+
+
+
+
+
+
 }

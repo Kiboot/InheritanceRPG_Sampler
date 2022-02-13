@@ -20,12 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="240dp"
         android:layout_marginBottom="140dp"
-        app:tint="#C3128124"
         app:layout_constraintBottom_toBottomOf="@+id/imgForeground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/forest_mount_01" />
+        app:srcCompat="@drawable/forest_mount_01"
+        app:tint="#C3128124" />
 
     <ImageView
         android:id="@+id/imgShrub"
@@ -101,5 +101,43 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnInteract1"
         app:layout_constraintTop_toBottomOf="@+id/btnInteract1" />
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="340dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ui_paper"
+        android:paddingLeft="30dp"
+        android:paddingTop="50dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="50dp"
+        android:scaleType="fitXY"
+        android:text="@string/loremIpsum"
+        android:textColor="@color/Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/txtP1Health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXXX"
+        android:textColor="@color/Maroon"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/txtP2Health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXXX"
+        android:textColor="@color/Maroon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/txtP1Health" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
