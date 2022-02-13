@@ -38,6 +38,9 @@ public class StartingPointAllocation extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting_point_allocation);
+
+
+
         i2 = new Intent(this,TownHall.class);
 
         Intent i = getIntent();

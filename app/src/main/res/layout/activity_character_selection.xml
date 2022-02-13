@@ -7,56 +7,56 @@
     tools:context=".View.CharacterSelection">
 
     <ImageButton
-        android:id="@+id/btnHeroIcon1"
+        android:id="@+id/btnHeroIconMage"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginTop="40dp"
         android:background="#0000"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toStartOf="@+id/btnHeroIcon2"
+        app:layout_constraintEnd_toStartOf="@+id/btnHeroHunter"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/flag_02_blue02"
+        app:srcCompat="@drawable/badge_mage"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/btnHeroIcon2"
+        android:id="@+id/btnHeroHunter"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:background="#0000"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toStartOf="@+id/btnHeroIcon3"
+        app:layout_constraintEnd_toStartOf="@+id/btnHeroWarrior"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnHeroIcon1"
-        app:layout_constraintTop_toTopOf="@+id/btnHeroIcon1"
-        app:srcCompat="@drawable/flag_02_green"
+        app:layout_constraintStart_toEndOf="@+id/btnHeroIconMage"
+        app:layout_constraintTop_toTopOf="@+id/btnHeroIconMage"
+        app:srcCompat="@drawable/badge_hunter"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/btnHeroIcon3"
+        android:id="@+id/btnHeroWarrior"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:background="#0000"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toStartOf="@+id/btnHeroIcon4"
+        app:layout_constraintEnd_toStartOf="@+id/btnHeroPaladin"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnHeroIcon2"
-        app:layout_constraintTop_toTopOf="@+id/btnHeroIcon2"
-        app:srcCompat="@drawable/flag_02_red"
+        app:layout_constraintStart_toEndOf="@+id/btnHeroHunter"
+        app:layout_constraintTop_toTopOf="@+id/btnHeroHunter"
+        app:srcCompat="@drawable/badge_warrior"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/btnHeroIcon4"
+        android:id="@+id/btnHeroPaladin"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:background="#0000"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnHeroIcon3"
-        app:layout_constraintTop_toTopOf="@+id/btnHeroIcon2"
-        app:srcCompat="@drawable/flag_02_yellow"
+        app:layout_constraintStart_toEndOf="@+id/btnHeroWarrior"
+        app:layout_constraintTop_toTopOf="@+id/btnHeroHunter"
+        app:srcCompat="@drawable/badge_paladin"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -98,7 +98,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHeroIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/btnHeroIconMage"
         app:srcCompat="@drawable/hero2" />
 
     <TextView

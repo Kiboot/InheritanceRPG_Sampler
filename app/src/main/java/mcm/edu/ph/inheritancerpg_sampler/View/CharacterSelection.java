@@ -29,10 +29,12 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection);
 
-        hero1 = findViewById(R.id.btnHeroIcon1);
-        hero2 = findViewById(R.id.btnHeroIcon2);
-        hero3 = findViewById(R.id.btnHeroIcon3);
-        hero4 = findViewById(R.id.btnHeroIcon4);
+
+
+        hero1 = findViewById(R.id.btnHeroIconMage);
+        hero2 = findViewById(R.id.btnHeroHunter);
+        hero3 = findViewById(R.id.btnHeroWarrior);
+        hero4 = findViewById(R.id.btnHeroPaladin);
         btnProceed = findViewById(R.id.btnProceed);
         heroPortrait = findViewById(R.id.imgHeroPortrait);
         heroDesc = findViewById(R.id.txtHeroDesc);
@@ -58,7 +60,7 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
 
 
         switch (v.getId()){
-            case R.id.btnHeroIcon1:
+            case R.id.btnHeroIconMage:
                 hero1.setEnabled(false);
                 hero2.setEnabled(true);
                 hero3.setEnabled(true);
@@ -70,7 +72,7 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
                 selection = 1;
                 break;
 
-            case R.id.btnHeroIcon2:
+            case R.id.btnHeroHunter:
                 hero1.setEnabled(true);
                 hero2.setEnabled(false);
                 hero3.setEnabled(true);
@@ -82,7 +84,7 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
                 heroDesc.setText("A class that makes use of ranged physical attacks");
                 selection = 2;
                 break;
-            case R.id.btnHeroIcon3:
+            case R.id.btnHeroWarrior:
                 hero1.setEnabled(true);
                 hero2.setEnabled(true);
                 hero3.setEnabled(false);
@@ -96,7 +98,7 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
 
 
                 break;
-            case R.id.btnHeroIcon4:
+            case R.id.btnHeroPaladin:
                 hero1.setEnabled(true);
                 hero2.setEnabled(true);
                 hero3.setEnabled(true);

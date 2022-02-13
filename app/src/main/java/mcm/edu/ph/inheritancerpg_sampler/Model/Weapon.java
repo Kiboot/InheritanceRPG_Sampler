@@ -24,7 +24,9 @@ public class Weapon extends GameItem{
         setStatCON(0);
         setHealthPt(0);
         setManaPt(0);
+        setItemRarity(0);
     }
+
     public Weapon(String name, String weaponType, int atkMin, int atkMax, double goldValue){
         setName(name);
         setWeaponType(weaponType);
@@ -40,6 +42,7 @@ public class Weapon extends GameItem{
         setStatCON(0);
         setHealthPt(0);
         setManaPt(0);
+        setItemRarity(0);
     }
 
 

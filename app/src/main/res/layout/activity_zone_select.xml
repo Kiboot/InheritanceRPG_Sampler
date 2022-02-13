@@ -30,14 +30,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="396dp"
+        android:layout_width="match_parent"
         android:layout_height="259dp"
         android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:srcCompat="@drawable/hero1" />
+        app:srcCompat="@drawable/bg_04" />
 
     <Button
         android:id="@+id/button6"
@@ -50,23 +51,34 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button7"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text="<"
+        android:layout_width="65dp"
+        android:layout_height="81dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:scaleX="-1"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button6" />
+        app:layout_constraintTop_toTopOf="@+id/button6"
+        app:srcCompat="@drawable/ui_arrow_r"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button8"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:text=">"
+        android:layout_width="65dp"
+        android:layout_height="81dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6" />
+        app:layout_constraintTop_toTopOf="@+id/button6"
+        app:srcCompat="@drawable/ui_arrow_r"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView20"
@@ -79,5 +91,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
