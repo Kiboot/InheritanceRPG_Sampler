@@ -55,7 +55,7 @@ public class Adventure extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.btnInteract1:
                 //TODO: interact button 1.
-                g1.delve(30, startingArea, txtLog, txtP1Health, txtP2Health);
+                delve(30, startingArea, txtLog, txtP1Health, txtP2Health);
                 break;
             case R.id.btnInteract2:
                 //TODO: interact button 2
