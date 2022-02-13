@@ -80,4 +80,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/wood_gui_bg" />
 
+    <Button
+        android:id="@+id/btnInteract1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Interact 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnInteract2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Interact 2"
+        app:layout_constraintEnd_toEndOf="@+id/btnInteract1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnInteract1"
+        app:layout_constraintTop_toBottomOf="@+id/btnInteract1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
