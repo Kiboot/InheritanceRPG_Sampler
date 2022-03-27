@@ -4,8 +4,7 @@ package mcm.edu.ph.inheritancerpg_sampler.Model;
 
 public class Zone {
 
-    private String zoneName;
-    private String zoneDesc;
+    private String zoneName,zoneDesc;
 
     private double expRate = 1;
     private double lootRate = 1;
@@ -14,6 +13,23 @@ public class Zone {
     private int instanceCount = 10;
     private int difficultyLevel = 1;
     private boolean bossEncounter = false;
+
+    int x = 123;
+    char car = 'J';
+    String name = "Kevin";
+    boolean single = true;
+    double num = 123.31;
+    float fal = 123.32f;
+
+
+    String[] listofnames;
+    String list[];
+
+
+
+
+
+    Zone beginnerZone = new Zone("Beginner Area", "Where beginners level up", false, 10, 1, 1, 1, .2, .8);
 
     //double enemyEncounterFactor = 0.80;
     //private static double chestEncounterFactor = 0.20;

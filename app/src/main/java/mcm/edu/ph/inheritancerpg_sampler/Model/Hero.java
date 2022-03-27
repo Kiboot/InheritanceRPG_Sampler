@@ -171,7 +171,7 @@ public class Hero extends GameUnit{
 
     //passive level up stat growth
     public void levelUpGrowth(int statSTR, int statAGI, int statCON, int statLUK, int statINT){
-        this.statSTR += statSTR;
+        this.statSTR += statSTR; // The global variable statSTR has been assigned the value of Global variable statSTR plus local variable statSTR, this.statSTR = this.statSTR + statSTR.
         this.statAGI += statAGI;
         this.statINT += statINT;
         this.statCON += statCON;
@@ -206,6 +206,14 @@ public class Hero extends GameUnit{
             levelUpGrowth(statSTR,statAGI,statCON,statLUK,statINT);
 
         }
+        boolean condition=true;
+        boolean condition1=true;
+        boolean condition2=true;
+
+
+
+
+
 
     }
 

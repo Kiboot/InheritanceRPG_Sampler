@@ -17,7 +17,7 @@ public class GameItem {
     private int itemRarity;
     private String itemType;
 
-    public GameItem(){}
+    public GameItem(){} //default constructor
 
     //getters
     public String getName() { return name; }

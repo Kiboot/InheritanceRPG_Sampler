@@ -113,6 +113,8 @@ public class CharacterSelection extends AppCompatActivity implements View.OnClic
 
 
                 break;
+
+
             case R.id.btnProceed:
                 intent.putExtra("heroClass",selection);
                 startActivity(intent);

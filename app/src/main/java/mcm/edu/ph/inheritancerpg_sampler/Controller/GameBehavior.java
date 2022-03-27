@@ -45,6 +45,7 @@ public class GameBehavior {
         instanceCount = zone.getInstanceCount();
         bossEncounter = zone.isBossEncounter();
 
+
         while(instanceCount > 0){ //while Instance amount is greater than 10
             int chestRoll = (int)(chestEncounterRate * zone.getChestEncounterFactor())*100;
             int enemyRoll = (int)(enemyEncounterRate * zone.getEnemyEncounterFactor())*100;
@@ -54,6 +55,7 @@ public class GameBehavior {
                 if( chestRoll <= 20) { //if the dice rolls 1 to 20, then open a chest
                     //TODO: put the code for chest encounter here
                     dungeonChest(difficultyLevel,hero); //code for chest loot randomizer
+
                 }
                 else if(enemyRoll <= 21 && enemyRoll >= 90){ //if the dice rolls 21 to 90, you encounter an enemy
                     //TODO: put the code for enemy encounter here
@@ -69,6 +71,7 @@ public class GameBehavior {
 
     public void combat(Monster monster, Hero hero, TextView txtLog, TextView p1health, TextView p2health){
         int gameCounter = 1; //the games turn counter
+
         int heroAtk = attack(hero.getAtkMin(),hero.getAtkMax(),monster.getArmor()); // damage randomizer for hero
         int monsAtk = attack(monster.getAtkMin(),monster.getAtkMax(),hero.getArmor()); // damage randomizer for monster
 
